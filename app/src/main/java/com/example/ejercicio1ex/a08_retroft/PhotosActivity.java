@@ -50,7 +50,7 @@ public class PhotosActivity extends AppCompatActivity {
         Retrofit retrofit = RetrofitObject.getConexion();
         ApiConexiones api = retrofit.create(ApiConexiones.class);
 
-        Call<ArrayList<Photo>>getPhotos = api.getPhotosAlbum(idAlbum);
+        Call<ArrayList<Photo>>getPhotos = api.getPhotosAlbumPath(idAlbum);
 
         getPhotos.enqueue(new Callback<ArrayList<Photo>>() {
             @Override
